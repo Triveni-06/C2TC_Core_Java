@@ -1,0 +1,30 @@
+package examplesc218;
+
+import java.util.Scanner;
+
+public class example4 {
+
+	public static void main(String[] args) {
+		boolean flag=false;
+		int i=0;
+		Scanner sc=new Scanner(System.in);
+		int size=sc.nextInt();
+		int arr[]=new int [size];
+		for(int i=0;i<size;i++)
+			arr[i]=sc.nextInt();
+		int key=sc.nextInt();
+		for(int i=0;i<size;i++)
+		{
+			if(arr[i]==key)
+			{
+				flag=true;
+				break;
+			}
+		}
+		if(flag)
+			System.out.println("position of " +key+ "is" +(i+1));
+		else
+			System.out.println("element not found");
+	}
+}
+
