@@ -17,8 +17,17 @@ public class example {
 			}
 		}
 			for(int i=0;i<row;i++)
+			{
 				for(int j=0;j<col;j++)
-						System.out.println(arr[j][i]);
+				{
+					if(j==0)
+						System.out.print(arr[j][i]);
+					else
+						System.out.print(" "+arr[j][i]);
 		}
+				System.out.println();
 	}
+}
+}
+
 
