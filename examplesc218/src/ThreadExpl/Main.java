@@ -9,5 +9,4 @@ public class Main {
 		thread1.start();
 		System.out.println("Hello world");
 	}
-
 }
