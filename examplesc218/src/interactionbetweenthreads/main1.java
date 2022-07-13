@@ -1,24 +1,23 @@
 package interactionbetweenthreads;
 
-public class Main {
-
+public class main1 {
 	public static void main(String[] args)throws InterruptedException {
-		customer1 c=new customer1();
+		counter c=new counter();
 		Runnable t=()->
 		{
-			c.withdrawal(1000);
+			c.counter(1000);
 		};
 		Runnable t1=()->
 		{
-			c.deposit(1500);
+			c.counter(1500);
 		};
 		Thread thread=new Thread(t);
-		Thread thread2=new Thread(t1);
+		Thread thread1=new Thread(t1);
 		thread.start();
-		thread2.start();
+		thread1.start();
 		thread.join();
-		thread2.join();
-		System.out.println(c.amount);
+		thread1.join();
+		System.out.println(c.count);
 	}
 
 }
